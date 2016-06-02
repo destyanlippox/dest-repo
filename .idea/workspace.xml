@@ -1,58 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d2ce1df-a243-49e4-84d7-c5fd3004fb25" name="Default" comment="Create fully funcitoning template of admin_4_metronic">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/timeout-keep-alive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_order_credit_memos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_order_history.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_order_invoices.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_order_shipment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_orders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_product_history.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_product_reviews.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ecommerce_products.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/idletimeout_keepalive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/jstree_ajax_data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/table_ajax.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/typeahead_countries.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/typeahead_custom.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/typeahead_nba.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/typeahead_nhl.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/username_checker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/DashboardController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/GeneralPageController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/TodoController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/UISelectController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/UserProfileController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/scripts/table-ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/page-head.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/quick-sidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/sidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/datatables/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/datatables/managed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/dropdowns.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/file_upload.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/form_tools.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/pickers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/profile/account.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/profile/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/profile/help.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/profile/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/todo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/ui_bootstrap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/ui_select.html" />
+    <list default="true" id="1d2ce1df-a243-49e4-84d7-c5fd3004fb25" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/global/scripts/app.js" afterPath="$PROJECT_DIR$/assets/global/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/global/scripts/app.min.js" afterPath="$PROJECT_DIR$/assets/global/scripts/app.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_order_credit_memos.php" afterPath="$PROJECT_DIR$/demo/ecommerce_order_credit_memos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_order_history.php" afterPath="$PROJECT_DIR$/demo/ecommerce_order_history.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_order_invoices.php" afterPath="$PROJECT_DIR$/demo/ecommerce_order_invoices.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_order_shipment.php" afterPath="$PROJECT_DIR$/demo/ecommerce_order_shipment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_orders.php" afterPath="$PROJECT_DIR$/demo/ecommerce_orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_product_history.php" afterPath="$PROJECT_DIR$/demo/ecommerce_product_history.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_product_reviews.php" afterPath="$PROJECT_DIR$/demo/ecommerce_product_reviews.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ecommerce_products.php" afterPath="$PROJECT_DIR$/demo/ecommerce_products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/jstree_ajax_data.php" afterPath="$PROJECT_DIR$/demo/jstree_ajax_data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/table_ajax.php" afterPath="$PROJECT_DIR$/demo/table_ajax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/typeahead_custom.php" afterPath="$PROJECT_DIR$/demo/typeahead_custom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/username_checker.php" afterPath="$PROJECT_DIR$/demo/username_checker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/DashboardController.js" afterPath="$PROJECT_DIR$/js/controllers/DashboardController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/GeneralPageController.js" afterPath="$PROJECT_DIR$/js/controllers/GeneralPageController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/TodoController.js" afterPath="$PROJECT_DIR$/js/controllers/TodoController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/UISelectController.js" afterPath="$PROJECT_DIR$/js/controllers/UISelectController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/UserProfileController.js" afterPath="$PROJECT_DIR$/js/controllers/UserProfileController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directives.js" afterPath="$PROJECT_DIR$/js/directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts/table-ajax.js" afterPath="$PROJECT_DIR$/js/scripts/table-ajax.js" />
     </list>
     <ignored path="projectmanagement.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,8 +77,8 @@
       <file leaf-file-name="form_tools.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/form_tools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="475" column="33" selection-start-line="475" selection-start-column="33" selection-end-line="475" selection-end-column="33" />
+            <state relative-caret-position="315">
+              <caret line="489" column="48" selection-start-line="489" selection-start-column="48" selection-end-line="489" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -291,18 +261,26 @@
       <option name="presentableId" value="Default" />
       <updated>1464678838131</updated>
       <workItem from="1464777293300" duration="1292000" />
-      <workItem from="1464838796251" duration="2795000" />
+      <workItem from="1464838796251" duration="2938000" />
     </task>
+    <task id="LOCAL-00001" summary="Create fully funcitoning template of admin_4_metronic">
+      <created>1464843154020</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464843154020</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4087000" />
+    <option name="totallyTimeSpent" value="4230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="713" height="709" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23265895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23265895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -589,8 +567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/form_tools.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="475" column="33" selection-start-line="475" selection-start-column="33" selection-end-line="475" selection-end-column="33" />
+        <state relative-caret-position="315">
+          <caret line="489" column="48" selection-start-line="489" selection-start-column="48" selection-end-line="489" selection-end-column="48" />
           <folding />
         </state>
       </provider>
