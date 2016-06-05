@@ -9,6 +9,7 @@
  */
 
 jQuery.fn.gantt = function (options) {
+
 	var defaults = {
 		source: null,
 		itemsPerPage: 7,
@@ -27,35 +28,9 @@ jQuery.fn.gantt = function (options) {
 	var dateEnd = null;
 	
 	var create = function(jQuerythis) {
+
 		if (!options.source)
 			return;
-
-		jQuery.getJSON(options.source, function(rData) {
-			data = rData;
-			rowsNum = data.length;
-			pageCount = Math.ceil(rowsNum/options.itemsPerPage);
-			rowsOnLastPage = rowsNum - (Math.floor(rowsNum/options.itemsPerPage) * options.itemsPerPage);
-			
-			dateStart = tools.getMinDate();
-			dateEnd = tools.getMaxDate();
-
-			var contTable = createContainer();
-			jQuerythis.append(contTable);
-			fillHollydays();
-			fillData();
-			jQuerythis.css({
-				height: jQuery(".fn-gantt").height() + "px"
-			});
-			jQuery('.fn-gantt .dataPanel').css({'margin-left': hPosition+'px'});
-			
-			var d = Math.round((options.startPos/1000 - dateStart/1000) / 86400 )-2;
-			if (d > 0)
-			{
-				navigateTo(-1*d * tools.getCellSize());
-			} else {
-				repositionLabel();
-			}
-		});
 
 		var createContainer = function() {
 			/* Left panel */
@@ -330,6 +305,61 @@ jQuery.fn.gantt = function (options) {
 				    }
 			});
 		};
+
+        if(options.source.isFile){
+            jQuery.getJSON(options.source, function(rData) {
+                console.log(rData);
+                data = rData;
+                rowsNum = data.length;
+                pageCount = Math.ceil(rowsNum/options.itemsPerPage);
+                rowsOnLastPage = rowsNum - (Math.floor(rowsNum/options.itemsPerPage) * options.itemsPerPage);
+                console.log("called inside getJSON");
+                dateStart = tools.getMinDate();
+                dateEnd = tools.getMaxDate();
+
+                var contTable = createContainer();
+                jQuerythis.append(contTable);
+                fillHollydays();
+                fillData();
+                jQuerythis.css({
+                    height: jQuery(".fn-gantt").height() + "px"
+                });
+                jQuery('.fn-gantt .dataPanel').css({'margin-left': hPosition+'px'});
+
+                var d = Math.round((options.startPos/1000 - dateStart/1000) / 86400 )-2;
+                if (d > 0)
+                {
+                    navigateTo(-1*d * tools.getCellSize());
+                } else {
+                    repositionLabel();
+                }
+            });
+        }else{
+            console.log(options.source);
+            data = options.source;
+            rowsNum = data.length;
+            pageCount = Math.ceil(rowsNum/options.itemsPerPage);
+            rowsOnLastPage = rowsNum - (Math.floor(rowsNum/options.itemsPerPage) * options.itemsPerPage);
+            dateStart = tools.getMinDate();
+            dateEnd = tools.getMaxDate();
+
+            var contTable = createContainer();
+            jQuerythis.append(contTable);
+            fillHollydays();
+            fillData();
+            jQuerythis.css({
+                height: jQuery(".fn-gantt").height() + "px"
+            });
+            jQuery('.fn-gantt .dataPanel').css({'margin-left': hPosition+'px'});
+
+            var d = Math.round((options.startPos/1000 - dateStart/1000) / 86400 )-2;
+            if (d > 0)
+            {
+                navigateTo(-1*d * tools.getCellSize());
+            } else {
+                repositionLabel();
+            }
+        }
 	};
 
 	var tools = new function() {
