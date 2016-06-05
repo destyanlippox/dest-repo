@@ -26,9 +26,9 @@ behavior: {
 (function (jQuery) {
 	
     jQuery.fn.ganttView = function () {
-    	
+
     	var args = Array.prototype.slice.call(arguments);
-    	
+
     	if (args.length == 1 && typeof(args[0]) == "object") {
         	build.call(this, args[0]);
     	}
@@ -53,7 +53,7 @@ behavior: {
             	resizable: true
             }
         };
-        
+
         var opts = jQuery.extend(true, defaults, options);
 
 		if (opts.data) {
@@ -346,19 +346,19 @@ behavior: {
     };
 
     var DateUtils = {
-    	
-        daysBetween: function (start, end) {
-            if (!start || !end) { return 0; }
-            start = Date.parse(start); end = Date.parse(end);
-            if (start.getYear() == 1901 || end.getYear() == 8099) { return 0; }
-            var count = 0, date = start.clone();
-            while (date.compareTo(end) == -1) { count = count + 1; date.addDays(1); }
-            return count;
-        },
-        
-        isWeekend: function (date) {
-            return date.getDay() % 6 == 0;
-        },
+
+		daysBetween: function (start, end) {
+			if (!start || !end) { return 0; }
+			start = Date.parse(start); end = Date.parse(end);
+			if (start.getYear() == 1901 || end.getYear() == 8099) { return 0; }
+			var count = 0, date = start.clone();
+			while (date.compareTo(end) == -1) { count = count + 1; date.addDays(1); }
+			return count;
+		},
+
+		isWeekend: function (date) {
+			return date.getDay() % 6 == 0;
+		},
 
 		getBoundaryDatesFromData: function (data, minDays) {
 			var minStart = new Date(); maxEnd = new Date();
@@ -371,15 +371,15 @@ behavior: {
 					if (maxEnd.compareTo(end) == -1) { maxEnd = end; }
 				}
 			}
-			
+
 			// Insure that the width of the chart is at least the slide width to avoid empty
 			// whitespace to the right of the grid
 			if (DateUtils.daysBetween(minStart, maxEnd) < minDays) {
 				maxEnd = minStart.clone().addDays(minDays);
 			}
-			
+
 			return [minStart, maxEnd];
 		}
-    };
+	};
 
 })(jQuery);

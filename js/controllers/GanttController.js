@@ -7,8 +7,10 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
         App.initAjax();
 
         console.log("about to load gantt");
-        $loadGantt();
+        // $loadGantt();
+        $createGantt();
     });
+
 
     $scope.project = {};
 
@@ -17,7 +19,7 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
     // set sidebar closed and body solid layout mode
     $rootScope.settings.layout.pageContentWhite = true;
     $rootScope.settings.layout.pageBodySolid = false;
-    $rootScope.settings.layout.pageSidebarClosed = false;
+    $rootScope.settings.layout.pageSidebarClosed = true;
 
     $loadGantt = function () {
 
@@ -39,7 +41,7 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
         // });
         $("#ganttChart").ganttView({
             data: ganttData,
-            slideWidth: 700,
+            slideWidth: 500,
             behavior: {
                 onClick: function (data) {
                     var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
@@ -54,6 +56,12 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
                     $("#eventMessage").text(msg);
                 }
             }
+        });
+    }
+    
+    $createGantt = function () {
+        $("#ganttChart").ganttChart({
+            data: ganttData
         });
     }
 

@@ -1,0 +1,53 @@
+div.ganttView {
+    border: 1px solid #999;
+}
+
+div.ganttView-sideview {
+    /*margin-top: 41px;*/
+    width: 625px;
+    overflow: hidden;
+    background-color: #808080;
+}
+
+div.ganttView-header{
+    height: 20px;
+}
+
+div.headerColDiv{
+    color: #666;
+    background-color: #F5F5F5;
+    float: left;
+    /*width: 100px;*/
+    text-align: center;
+    border-right: 1px solid black;;
+}
+
+div.ganttView-data-item {
+    background-color: #F5F5F5;
+    float: left;
+    border-right: 1px solid black;;
+}
+
+div.ganttView-data{
+    height: 62px;
+}
+
+div.colId{
+    width: 100px;
+}
+
+div.colActivities{
+    width: 200px;
+}
+
+div.colPIC{
+    width: 150px;
+}
+
+div.colStatus{
+    width: 100px;
+}
+
+div.colSeries{
+    width: 75px;
+}
