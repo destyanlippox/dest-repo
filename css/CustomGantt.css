@@ -1,0 +1,203 @@
+div.ganttview-hzheader-month,
+div.ganttview-hzheader-day,
+div.ganttview-vtheader,
+div.ganttview-vtheader-item-name,
+div.ganttview-vtheader-series,
+div.ganttview-grid,
+div.ganttView-sideview,
+div.ganttview-grid-row-cell {
+    float: left;
+}
+
+div.ganttview-hzheader-month,
+div.ganttview-hzheader-day {
+    text-align: center;
+    box-sizing: content-box;
+}
+
+div.ganttview-grid-row-cell.last,
+div.ganttview-hzheader-day.last,
+div.ganttview-hzheader-month.last {
+    border-right: none;
+}
+
+div.ganttview {
+    border: 1px solid #999;
+}
+
+/* Horizontal Header */
+
+div.ganttview-hzheader-month {
+    width: 60px;
+    height: 20px;
+    border-right: 1px solid #d0d0d0;
+    line-height: 20px;
+}
+
+div.ganttview-hzheader-day {
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #f0f0f0;
+    border-top: 1px solid #d0d0d0;
+    line-height: 20px;
+    color: #777;
+}
+
+/* Vertical Header */
+
+div.ganttview-vtheader {
+    margin-top: 41px;
+    width: 240px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+div.ganttview-vtheader-item {
+    overflow: hidden;
+    color: #666;
+}
+
+div.ganttview-vtheader-item-name {
+    width: 100px;
+    padding-left: 5px;
+    border-top: 1px solid #d0d0d0;
+    line-height: 16px;
+}
+
+div.ganttview-vtheader-series-name {
+    width: 130px;
+    height: 31px;
+    border-top: 1px solid #d0d0d0;
+    line-height: 16px;
+    padding-left: 5px;
+}
+
+/* Slider */
+
+div.ganttView-slide-container {
+    overflow: auto;
+    /*border-left: 1px solid #999;*/
+}
+
+
+/* Grid */
+
+div.ganttview-grid-row-cell {
+    width: 20px;
+    height: 31px;
+    border-right: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    box-sizing: content-box;
+}
+
+div.ganttview-grid-row-cell.ganttview-weekend {
+    background-color: #fafafa;
+}
+
+/* Blocks */
+
+div.ganttview-blocks {
+    margin-top: 40px;
+    box-sizing: content-box;
+}
+
+div.ganttview-block-container {
+    height: 32px;
+    padding-top: 4px;
+}
+
+div.ganttview-block {
+    position: relative;
+    height: 25px;
+    background-color: #E5ECF9;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-sizing: content-box;
+}
+
+div.ganttview-block-text {
+    position: absolute;
+    height: 12px;
+    font-size: 0.8em;
+    color: #999;
+    padding: 2px 3px;
+}
+
+
+/* Adjustments for jQuery UI Styling */
+
+div.ganttview-block div.ui-resizable-handle.ui-resizable-s {
+    bottom: -0;
+}
+div.ganttView {
+    border: 1px solid #999;
+}
+
+/* The custom css made for CustomGantt */
+
+div.ganttView-sideview {
+    /*margin-top: 41px;*/
+    width: 625px;
+    overflow: hidden;
+    background-color: #808080;
+}
+
+div.ganttView-header{
+    height: 20px;
+    margin-bottom: 22px;
+}
+
+div.headerColDiv{
+    color: #666;
+    background-color: #F5F5F5;
+    float: left;
+    /*width: 100px;*/
+    text-align: center;
+    border-right: 1px solid black;;
+}
+
+div.ganttView-data-item {
+    background-color: #F5F5F5;
+    float: left;
+    border-right: 1px solid black;;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+div.ganttView-data{
+    height: 64px;
+    overflow: hidden;
+}
+
+div.colId{
+    width: 100px;
+}
+
+div.colActivities{
+    width: 200px;
+}
+
+div.colPIC{
+    width: 150px;
+}
+
+div.colStatus{
+    width: 100px;
+}
+
+div.colSeries{
+    width: 75px;
+}
+
+.ganttView-data-item.colActivities,
+.ganttView-data-item.colId,
+.ganttView-data-item.colPIC,
+.ganttView-data-item.colStatus{
+    height: inherit;
+}
+
+.ganttView-Series-name{
+    height: 32px;
+    border-bottom: 1px solid #d0d0d0;
+}

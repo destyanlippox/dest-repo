@@ -1,0 +1,31 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="#">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Dashboard </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+
+<div ng-controller="GanttController">
+    <div class="note note-info">
+        <h3> {{project.name}}
+            <span class="close" data-close="note"></span>
+        </h3>
+    </div>
+    <div class="portlet box yellow-crusta">
+        <div class="portlet-title">
+
+        </div>
+        <div class="portlet-body form">
+            <div id="ganttChart"></div>
+            <br/><br/>
+            <div id="eventMessage"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END MAIN CONTENT -->
