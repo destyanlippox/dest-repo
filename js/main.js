@@ -188,15 +188,10 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                     name: 'MetronicApp',
                     insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                     files: [
-                        // "assets/global/plugins/jquery-gantt/style.css",
-                        // "assets/global/plugins/jquery-gantt/jquery.fn.gantt.js",
-                        // "assets/global/plugins/jquery-ui/jquery-ui.min.css",
-                        // "assets/global/plugins/jquery-ui/jquery-ui.min.js",
-                        // "assets/global/plugins/jquery-gantt-master/lib/date.js",
+                        
+                        "assets/global/plugins/jquery-ui/jquery-ui.min.css",
+                        "assets/global/plugins/jquery-ui/jquery-ui.min.js",
 
-                        // "assets/global/plugins/jquery-gantt-master/example/data.js",
-                        // "assets/global/plugins/jquery-gantt-master/jquery.ganttView.css",
-                        // "assets/global/plugins/jquery-gantt-master/jquery.ganttView.js",
                         'css/CustomGantt.css',
                         'js/scripts/CustomGantt.js',
                         'js/scripts/data.js',

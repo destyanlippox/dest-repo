@@ -22,23 +22,6 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
     $rootScope.settings.layout.pageSidebarClosed = true;
 
     $loadGantt = function () {
-
-        // var data = [{ "name": "Step A "
-        //     ,"desc": "Step B"
-        //     ,"values":
-        //         [{ "id"          : "b0"
-        //             , "from"       : "/Date(1320182000000)/"
-        //             , "to"         : "/Date(1320301600000)/"
-        //             , "desc"       : "Id: 0<br/>Name: Step A"
-        //             , "label"      : "Step 1"
-        //             , "customClass": "ganttRed"
-        //         }]
-        //     ,"isFile":false
-        // }];
-        //
-        // jQuery(".gantt").gantt({
-        //     source: data
-        // });
         $("#ganttChart").ganttView({
             data: ganttData,
             slideWidth: 500,
@@ -61,7 +44,22 @@ angular.module("MetronicApp").controller('GanttController', function($rootScope,
     
     $createGantt = function () {
         $("#ganttChart").ganttChart({
-            data: ganttData
+            data: ganttData,
+            slideWidth: 520,
+            behavior: {
+                onClick: function (data) {
+                    var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onResize: function (data) {
+                    var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onDrag: function (data) {
+                    var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                }
+            }
         });
     }
 
