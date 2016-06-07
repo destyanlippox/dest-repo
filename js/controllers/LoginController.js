@@ -7,10 +7,13 @@
 angular.module("MetronicApp").controller('LoginController', function($rootScope, $scope, $http, $timeout) {
     $scope.$on('$viewContentLoaded', function() {
         // initialize core components
-        App.initAjax();
-
-        // console.log("about to load gantt");
-        // $loadGantt();
-        // $createGantt();
+        // App.initAjax();
+        $scope.controls = "LoginController";
     });
+
+    $scope.submitLogin = function () {
+        console.log("logit");
+        console.log($scope.username);
+        console.log($scope.password);
+    }
 });

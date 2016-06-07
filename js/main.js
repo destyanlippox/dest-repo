@@ -89,7 +89,6 @@ MetronicApp.factory('settings', ['$rootScope', function($rootScope) {
 /* Setup App Main Controller */
 MetronicApp.controller('AppController', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.$on('$viewContentLoaded', function() {
-        console.log("view content loaded");
         App.initComponents(); // init core components
         //Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive 
     });
@@ -152,7 +151,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
     // .otherwise("/dashboard");
     // .otherwise("app/gantt");
     // .otherwise("/app/dashboard");
-    .otherwise("/access");
+    .otherwise("/access/login");
     $stateProvider
 
         // Dashboard
@@ -251,7 +250,12 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         // Access Pages (Login, Signup, Dll)
         .state('access',{
             url: "/access",
+            template: '<div ui-view></div>'
+        })
+        .state('access.login',{
+            url: "/login",
             templateUrl:"views/access/login.html",
+            controller : "LoginController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad){
                     return $ocLazyLoad.load([{
@@ -259,25 +263,21 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
                             'assets/global/plugins/select2/css/select2.min.css',
-                            'assets/global/plugins/select2/css/select2-bootstrap.min.css'
+                            'assets/global/plugins/select2/css/select2-bootstrap.min.css',
                         ]
                     },{
                         name: 'MetronicApp',
                         files: [
-                            'assets/pages/css/login-4.css',
                             'assets/global/plugins/select2/js/select2.full.min.js',
                             'assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js',
                             'assets/global/plugins/backstretch/jquery.backstretch.min.js',
+                            'assets/pages/css/login-4.css',
                             'assets/pages/scripts/login-4.min.js',
                             'js/controllers/LoginController.js'
                         ]
                     }]);
                 }]
             }
-        })
-
-        .state('access.login',{
-
         })
         // AngularJS plugins
         .state('fileupload', {
