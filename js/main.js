@@ -147,16 +147,62 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 /* Setup Rounting For All Pages */
 MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    // $urlRouterProvider.otherwise("/dashboard.html");
-    $urlRouterProvider.otherwise("/gantt.html");
-    
+    $urlRouterProvider
+    // .otherwise("/dashboard");
+    // .otherwise("app/gantt");
+    // .otherwise("/app/dashboard");
+    .otherwise("/access/login");
     $stateProvider
 
         // Dashboard
-        .state('dashboard', {
-            url: "/dashboard.html",
-            templateUrl: "views/dashboard.html",            
-            data: {pageTitle: 'Admin Dashboard Template'},
+        // .state('dashboard', {
+        //     url: "/dashboard",
+        //     templateUrl: "views/dashboard.html",
+        //     data: {pageTitle: 'Admin Dashboard Template'},
+        //     controller: "DashboardController",
+        //     resolve: {
+        //         deps: ['$ocLazyLoad', function($ocLazyLoad) {
+        //             return $ocLazyLoad.load({
+        //                 name: 'MetronicApp',
+        //                 insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+        //                 files: [
+        //                     'assets/global/plugins/morris/morris.css',
+        //                     'assets/global/plugins/morris/morris.min.js',
+        //                     'assets/global/plugins/morris/raphael-min.js',
+        //                     'assets/global/plugins/jquery.sparkline.min.js',
+        //
+        //                     'assets/pages/scripts/dashboard.min.js',
+        //                     'js/controllers/DashboardController.js'
+        //                 ]
+        //             });
+        //         }]
+        //     }
+        // })
+        .state('app',{
+            abstract: true,
+            url: '/app',
+            templateUrl: 'views/blocks/app.html',
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        // insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            'assets/layouts/layout4/css/layout.min.css',
+                            'assets/layouts/layout4/css/themes/light.min.css',
+                            'assets/layouts/layout4/css/custom.min.css',
+
+                            'assets/layouts/layout4/scripts/layout.min.js',
+                            'assets/layouts/global/scripts/quick-sidebar.min.js',
+                            'assets/layouts/layout4/scripts/demo.min.js'
+                        ]
+                    });
+                }]
+            }
+        })
+        .state('app.dashboard',{
+            url: '/dashboard',
+            templateUrl: "views/dashboard.html",
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -170,15 +216,14 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             'assets/global/plugins/jquery.sparkline.min.js',
 
                             'assets/pages/scripts/dashboard.min.js',
-                            'js/controllers/DashboardController.js',
-                        ] 
+                            'js/controllers/DashboardController.js'
+                        ]
                     });
                 }]
             }
         })
-
-        .state("gantt", {
-            url: "/gantt.html",
+        .state("app.gantt", {
+            url: "/gantt",
             templateUrl: "views/gantt.html",
             data: {pageTitle: 'Project Function Gantt Chart'},
             controller : "GanttController",
@@ -202,7 +247,38 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                 );
             }]
         })
-
+        // Access Pages (Login, Signup, Dll)
+        .state('access',{
+            url: "/access",
+            template: '<div ui-view></div>'
+        })
+        .state('access.login',{
+            url: "/login",
+            templateUrl:"views/access/login.html",
+            controller : "LoginController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad){
+                    return $ocLazyLoad.load([{
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                        files: [
+                            'assets/global/plugins/select2/css/select2.min.css',
+                            'assets/global/plugins/select2/css/select2-bootstrap.min.css',
+                        ]
+                    },{
+                        name: 'MetronicApp',
+                        files: [
+                            'assets/global/plugins/select2/js/select2.full.min.js',
+                            'assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js',
+                            'assets/global/plugins/backstretch/jquery.backstretch.min.js',
+                            'assets/pages/css/login-4.css',
+                            'assets/pages/scripts/login-4.min.js',
+                            'js/controllers/LoginController.js'
+                        ]
+                    }]);
+                }]
+            }
+        })
         // AngularJS plugins
         .state('fileupload', {
             url: "/file_upload.html",
